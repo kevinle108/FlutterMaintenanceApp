@@ -1,0 +1,6 @@
+bottom nav bar:
+-uses IndexedStack to maintain state of each screen when switching to another screen
+    source: https://www.youtube.com/watch?v=xoKqQjSDZ60
+
+*uses setState on bottom nav bar, switch to riverpod in future?
+
