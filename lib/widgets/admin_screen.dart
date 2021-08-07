@@ -4,10 +4,19 @@ class AdminScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'Admin',
-        style: TextStyle(fontSize: 60),
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(
+            child: Text(
+              'Admin',
+              style: TextStyle(fontSize: 30),
+            )),
+      ),
+      body: Center(
+        child: Text(
+          'Admin',
+          style: TextStyle(fontSize: 60),
+        ),
       ),
     );
   }

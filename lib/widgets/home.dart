@@ -21,12 +21,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Center(
-            child: Text(
-          'IVS Maintenance App',
-        )),
-      ),
+
       body: IndexedStack(
         index: selectedIndex,
         children: screens,
@@ -49,7 +44,7 @@ class _HomeState extends State<Home> {
             icon: Icon(Icons.admin_panel_settings_outlined),
             label: 'Admin',
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'User'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'User'),
         ],
       ),
     );

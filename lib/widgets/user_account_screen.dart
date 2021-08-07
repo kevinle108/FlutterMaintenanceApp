@@ -1,13 +1,23 @@
 import 'package:flutter/material.dart';
 
 class UserAccountScreen extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'User',
-        style: TextStyle(fontSize: 60),
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(
+            child: Text(
+          'User Account',
+          style: TextStyle(fontSize: 30),
+        )),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {},
+          child: Text(
+            'Sign Out',
+          ),
+        ),
       ),
     );
   }
