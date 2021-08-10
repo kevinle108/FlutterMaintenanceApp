@@ -30,9 +30,14 @@ class TownCard extends StatelessWidget {
                   subtitle: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        '${town.time}',
-                        style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                      Row(
+                        children: [
+                          Icon(Icons.schedule, size: 12,),
+                          Text(
+                            ' ${town.time}',
+                            style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                          ),
+                        ],
                       ),
                       SizedBox(height: 10,),
                       Row(
@@ -62,9 +67,10 @@ class TownCard extends StatelessWidget {
               ],
             ),
               children: [
-                Text('Big Bang'),
-                Text('Birth of the Sun'),
-                Text('Earth is Born'),
+                createItemField('Contact Names', town.contactName),
+                createItemField('Phone', town.phone),
+                createItemField('Parking Notes', town.parkingNotes),
+                createItemField('Building Notes', town.buildingNotes),
               ],
           ),
           ButtonBar(
@@ -90,20 +96,19 @@ class TownCard extends StatelessWidget {
   }
 }
 
-// ButtonBar(
-// alignment: MainAxisAlignment.start,
-// children: [
-// TextButton(
-// onPressed: () {
-// // Perform some action
-// },
-// child: const Text('Start Town'),
-// ),
-// TextButton(
-// onPressed: () {
-// // Perform some action
-// },
-// child: const Text('Fill Town Report'),
-// ),
-// ],
-// ),
+// helper function to create the expanded field items
+Widget createItemField(String fieldName, String fieldInfo) {
+  return Padding(
+    padding: const EdgeInsets.all(8.0),
+    child: Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          '$fieldName: ',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        Expanded(child: Text(fieldInfo)),
+      ],
+    ),
+  );
+}
