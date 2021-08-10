@@ -12,10 +12,14 @@ class AdminScreen extends StatelessWidget {
               style: TextStyle(fontSize: 30),
             )),
       ),
-      body: Center(
-        child: Text(
-          'Admin',
-          style: TextStyle(fontSize: 60),
+      body: Card(
+        child: ExpansionTile(
+          title: Text('Birth of Universe'),
+          children: [
+            Text('Big Bang'),
+            Text('Birth of the Sun'),
+            Text('Earth is Born'),
+          ],
         ),
       ),
     );
